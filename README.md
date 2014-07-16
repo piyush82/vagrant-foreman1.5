@@ -6,7 +6,7 @@ Vagrant script to create a foreman 1.5 VM
 
 Configuration Note
 ==================
-After the Foreman is up and running, during the very fisrt interface access, please do this following:
+After the Foreman is up and running, during the very first interface access, please do this following:
 
 1. From the top menu bar, Host -> Provisioning Templates
 2. Jump to page 2, then select "PXELinux global default"
