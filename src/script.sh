@@ -30,5 +30,15 @@ wget --timeout=10 --tries=3 --no-check-certificate -nv -c "http://archive.ubuntu
 /sbin/iptables --append FORWARD --in-interface eth1 -j ACCEPT
 sysctl net.ipv4.ip_forward=1
 sysctl -p
+
+echo "Setting the Net forwarding rules now."
+cp /tmp/files-to-go/fwd-traffic /etc/init.d/fwd-traff
+chmod a+x /etc/init.d/fwd-traff
+#set to run on boot
+ln -s /etc/init.d/fwd-traff /etc/rc2.d/S96forwardtraffic
+
+# install the rules
+/etc/init.d/fwd-traff
+
 echo "Rebooting machine ... please wait a few seconds before doing vagrant ssh"
 reboot
