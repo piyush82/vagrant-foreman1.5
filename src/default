@@ -14,4 +14,4 @@ LABEL discovery
 MENU LABEL Foreman Discovery
 MENU DEFAULT
 KERNEL /boot/vmlinuz0
-APPEND initrd=/boot/initrd0.img foreman.url=https://foreman.cloudcomplab.ch
+APPEND initrd=/boot/initrd0.img foreman.url=https://foreman.cloudcomplab.ch root=live:/foreman.iso
