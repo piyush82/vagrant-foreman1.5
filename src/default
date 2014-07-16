@@ -1,0 +1,17 @@
+DEFAULT menu
+PROMPT 0
+MENU TITLE PXE Menu
+TIMEOUT 200
+TOTALTIMEOUT 6000
+ONTIMEOUT discovery
+
+LABEL local
+     MENU LABEL (local)
+     MENU DEFAULT
+     LOCALBOOT 0
+
+LABEL discovery
+MENU LABEL Foreman Discovery
+MENU DEFAULT
+KERNEL /boot/vmlinuz0
+APPEND initrd=/boot/initrd0.img foreman.url=https://foreman.cloudcomplab.ch
