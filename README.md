@@ -11,14 +11,14 @@ After the Foreman is up and running, during the very fisrt interface access, ple
 1. From the top menu bar, Host -> Provisioning Templates
 2. Jump to page 2, then select "PXELinux global default"
 3. At the very bottom add these lines:
-
+<pre>
 LABEL discovery
 MENU LABEL Foreman Discovery
 MENU DEFAULT
 KERNEL /boot/vmlinuz0
 APPEND initrd=/boot/initrd0.img foreman.url=https://foreman.cloudcomplab.ch root=live:/foreman.iso
 IPAPPEND 2
-
+</pre>
 4. Change 'ONTIMEOUT local' -> 'ONTIMEOUT discovery' on line 13
 5. Save the changes
 6. From the top menu bar, Infrastructure -> Provisioning setup
